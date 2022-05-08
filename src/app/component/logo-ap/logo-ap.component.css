@@ -1,0 +1,49 @@
+logo-ap{
+  width: 150px;
+}
+.logo {
+  width: 10%;
+  position:relative;
+  z-index:1;
+ }
+
+ .minis {
+   width: 10%;
+   position:relative;
+   z-index:1;
+  }
+
+ .inti {
+   width: 3%;
+   margin-right: 1%;
+   position:relative;
+ }
+
+ #icored {
+   margin-top: 25%;
+   position: relative;
+   z-index: 4;
+ }
+
+ @media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
+ /**
+ #perfil {
+   width: 10%;
+   height: "auto";
+   position:relative;
+   margin-top: -15%;
+   left: 35px;
+   size-adjust: 20%;
+   z-index:2;
+  }
+
+  #Esfera {
+   margin-top: -25%;
+   position: relative;
+ }
+ */

@@ -1,0 +1,15 @@
+div{
+  background-color: #122660;
+}
+
+app-redess{
+
+  float: right;
+  margin-top: 2%;
+}
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
