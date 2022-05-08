@@ -7,6 +7,7 @@ import { LogoAPComponent } from './component/logo-ap/logo-ap.component';
 import {HeaderComponent} from './component/header/header.component';
 import { RedessComponent } from './component/redess/redess.component';
 import { BannerComponent } from './component/banner/banner.component';
+import { SobreMiComponent } from './component/sobre-mi/sobre-mi.component';
 
 
 
@@ -16,7 +17,8 @@ import { BannerComponent } from './component/banner/banner.component';
     LogoAPComponent,
     HeaderComponent,
     RedessComponent,
-    BannerComponent
+    BannerComponent,
+    SobreMiComponent
 
   ],
   imports: [

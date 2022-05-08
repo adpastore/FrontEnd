@@ -1,3 +1,4 @@
+/* fondo tira superior */
 div{
   background-color: #122660;
 }
@@ -5,9 +6,5 @@ div{
   display: flex;
 }
 
-@media (max-width: 600px) {
-  .facet_sidebar {
-    display: none;
-  }
-}
+
 
