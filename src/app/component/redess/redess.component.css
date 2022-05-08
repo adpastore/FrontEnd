@@ -1,7 +1,10 @@
-div{
-  background-color: #122660;
+img{
+  width: 60px;
+
 }
-.contenedor-iconos{
+
+.app-redess{
+  float: right;
   display: flex;
 }
 
@@ -10,4 +13,3 @@ div{
     display: none;
   }
 }
-
