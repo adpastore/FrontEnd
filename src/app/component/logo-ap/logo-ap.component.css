@@ -1,38 +1,47 @@
-.logo-app{
-  width: 50%;
+.banda{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.cabecera {
-  width: 15%;
+.logo{
+  display: flex;
+  height: 80%;
+  width: auto;
+  flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.logo {
-  position:relative;
-  z-index:1;
+ #inti {
+   width: 30px;
+   height: 40px;
+   margin-right: 6px;
+
  }
-
- .minis {
-   position:relative;
-   z-index:1;
+#minis{
+  width: 140px;
+  height: 40px;
   }
-
- .inti {
-   width: 5%;
-   margin-right: 4%;
-   position:relative;
- }
-
- .icored {
-   margin-top: 5%;
-   position: relative;
+#ap{
+  width: 100px;
+  height: 40px;
+}
+img{
+  width: 60px;
+}
+#iconos{
+  flex-wrap: wrap;
+}
+#boton{
+  margin-right: 5px;
 }
 
- @media (max-width: 600px) {
-  .facet_sidebar {
-    display: none;
-  }
-}
 
- /**
+
+
+
+
+ /*
  #perfil {
    width: 10%;
    height: "auto";

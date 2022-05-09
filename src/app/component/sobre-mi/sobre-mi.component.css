@@ -1,11 +1,14 @@
 /*Espacio alrededor*/
 .row{
-padding: 13px;
+padding: 14px;
 }
 
 #nombre{
     font-weight: bold;
     font-size: 20px;
+}
+#miFoto{
+max-width: 80%;
 }
 
 /*Color de fondo de pagina*/
