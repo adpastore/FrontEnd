@@ -1,3 +1,4 @@
+import { Usuario } from './../../models/usuario';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  public usuario : Usuario | undefined;
+  public aditUsuario : Usuario | undefined;
 
   constructor() { }
 

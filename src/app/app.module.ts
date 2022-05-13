@@ -12,7 +12,7 @@ import { EducacionComponent } from './component/educacion/educacion.component';
 import { FormsModule } from '@angular/forms';
 import { PotenciasComponent } from './component/potencias/potencias.component';
 import { FooterComponent } from './component/footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +32,10 @@ import { FooterComponent } from './component/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
