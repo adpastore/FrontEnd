@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public usuario : Usuario | undefined;
-  public aditUsuario : Usuario | undefined;
+ // public usuario : Usuario | undefined;
+ // public aditUsuario : Usuario | undefined;
 
   constructor() { }
 
