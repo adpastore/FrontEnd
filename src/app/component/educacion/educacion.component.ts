@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
+
 export class EducacionComponent implements OnInit {
 
   constructor() { }
@@ -12,4 +13,12 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+export interface Educacion{
+  idEdu:number;
+  tituloEdu:string;
+  descEdu:string;
+  imagenEdu:string;
+  fechaIniEdu:Date;
+  fechaFinEdu:Date;
 }

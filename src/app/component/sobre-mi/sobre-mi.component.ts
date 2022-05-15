@@ -10,7 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class SobreMiComponent implements OnInit {
 
   public usuario : Usuario | undefined;
-  public aditUsuario : Usuario | undefined;
+  public editUsuario : Usuario | undefined;
 
   constructor(private sobremiService : SobremiService) { }
 
