@@ -1,5 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
+import { HeaderService } from './../../servicios/header.service';
 import { Usuario } from './../../models/usuario';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -8,12 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
- // public usuario : Usuario | undefined;
- // public aditUsuario : Usuario | undefined;
+  public usuario : Usuario | undefined;
+  public aditUsuario : Usuario | undefined;
 
-  constructor() { }
+  constructor(private headerService : HeaderService) { }
 
   ngOnInit(): void {
+    this.getUser();
   }
-
+  public getUser():void{
+    this.headerService.getUser().subscribe({
+    next: (response: Usuario) =>{
+      this.usuario=response;
+    },
+    error:(error:HttpErrorResponse)=>{
+    alert(error.message);
+    }
+  })
+  }
 }

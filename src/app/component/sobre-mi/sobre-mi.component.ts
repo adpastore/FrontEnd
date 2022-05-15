@@ -1,5 +1,7 @@
+import { SobremiService } from './../../servicios/sobremi.service';
 import { Component, OnInit } from '@angular/core';
-
+import { Usuario } from './../../models/usuario';
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-sobre-mi',
   templateUrl: './sobre-mi.component.html',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreMiComponent implements OnInit {
 
-  constructor() { }
+  public usuario : Usuario | undefined;
+  public aditUsuario : Usuario | undefined;
+
+  constructor(private sobremiService : SobremiService) { }
 
   ngOnInit(): void {
+    this.getUser();
+  }
+  public getUser():void{
+    this.sobremiService.getUser().subscribe({
+    next: (response: Usuario) =>{
+      this.usuario=response;
+    },
+    error:(error:HttpErrorResponse)=>{
+    alert(error.message);
+    }
+  })
   }
 
 }
