@@ -1,12 +1,32 @@
-<div class="row" *ngFor="let educacion of educacion">
-  <h2>Educacion</h2>
-  <div class="col-lg-11" *ngIf="educacion">
+<div class="row align-items" *ngFor="let educacion of educaciones">
+  <div class="col-3">
+  <h3>Educacion</h3>
+      <img alt="Imagen Robot" src="{{educacion.imagenEdu}}" width="200">
+  </div>
+    <div class="col text-center">
+      <a
+      class="btn btn-primary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="edit"
+      ><em class="fa fa-pencil"></em>
+    </a>
+    <a
+      class="btn btn-secondary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="delete"
+      ><em class="fa fa-times"></em>
+    </a>
     <ul>
       <li>
         <h2>{{educacion.sedeEdu}}</h2> - <h3>{{educacion.fechaIniEdu}} {{educacion.fechaFinEdu}}</h3>
       </li>
+    </ul>
+    <div class="col-12">
+      <ul>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident alias laborum amet saepe, cupiditate pariatur, quidem corrupti sunt itaque maxime atque ex eveniet reprehenderit aliquid perferendis? Dicta hic optio fugit.
+        {{educacion.tituloEdu}}  ->  {{educacion.descEdu}}
       </p>
     </ul>
 

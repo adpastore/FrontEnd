@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="usuario">
   <!-- forma de presentarse en diferentes dispositivos -->
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
     <img
@@ -8,17 +8,28 @@
       id="miFoto"
     />
   </div>
-  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" *ngIf="usuario">
-    <p id="nombre">{{usuario.nombre}} {{usuario.apellido}}</p>
-    <p>{{usuario.titulo}}</p>
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" >
+    <p id="nombre">{{ usuario.nombre }} {{ usuario.apellido }}</p>
+    <p>{{ usuario.titulo }}</p>
   </div>
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" class="col text-center">
+    <a
+      class="btn btn-primary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="edit"
+      ><em class="fa fa-pencil"></em>
+    </a>
+    <a
+      class="btn btn-secondary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="delete"
+      ><em class="fa fa-times"></em>
+    </a>
     <span>
       <h1>Acerca de mi</h1>
-      <p>
-        Programador Web Full Stack Trainee, con un gran interés en aumentar mis
-        habilidades. Trabajé siempre en equipos colaborativos para proporcionar un excelente servicio. Estoy en busca de una oportunidad laboral en la que desarrollar mis habilidades y adquirir experiencia. Con óptimas habilidades para fomentar las relaciones con los clientes mediante una comunicación cuidada orientada a garantizar su fidelización.Vendedor muy experimentado de Materiales Eléctricos, programador de micro-PLC para aplicaciones de Transferencias automáticas entre Grupos Electrógenos y la Red pública, cómo así también de programas de menores alcances.
-      </p>
+      <p>{{ usuario.acerca }} {{ usuario.acercas }} {{ usuario.acercas2 }}</p>
     </span>
   </div>
 </div>

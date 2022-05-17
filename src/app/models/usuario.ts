@@ -5,6 +5,8 @@ export interface Usuario{
   titulo: string;
   fotoPeril: string;
   acerca: string;
+  acercas: string;
+  acercas2: string;
   telefono: number;
   mail: string;
   facebook: string;

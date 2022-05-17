@@ -10,7 +10,7 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 
 export class EducacionComponent implements OnInit {
 
-  public educacion : Educacion[]=[];
+  public educaciones : Educacion[]=[];
 
   constructor(private educacionService : EducacionService) { }
 
@@ -21,7 +21,7 @@ export class EducacionComponent implements OnInit {
   public getEducacion():void{
     this.educacionService.getEducacion().subscribe({
       next:(Response: Educacion[])=>{
-        this.educacion=Response;
+        this.educaciones=Response;
       },
       error:(error:HttpErrorResponse)=>{
         alert(error.message);
