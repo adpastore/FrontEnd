@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 export class EducacionComponent implements OnInit {
 
   public educaciones : Educacion[]=[];
+  public editEducacion : Educacion | undefined;
+  public deleteEducacion : Educacion | undefined;
 
   constructor(private educacionService : EducacionService) { }
 
@@ -29,9 +32,29 @@ export class EducacionComponent implements OnInit {
 
     })
   }
+  public onOpenModal(mode:string, educacion?: Educacion):void{
+    const container=document.getElementById('main-container');
+    const button=document.createElement('button');
+    button.style.display='none';
+    button.setAttribute('data-toggle', 'modal');
+    if(mode==='add'){
+      button.setAttribute('data-target','#addEducacionModal')
+    }else if(mode==='delete'){
+      button.setAttribute('data-target','#deleteEducacionModal')
+      this.deleteEducacion=educacion;
+    }else if(mode==='edit'){
+      button.setAttribute('data-target','#editEducacionModal')
+      this.editEducacion=educacion;
+    }
+    container?.appendChild(button);
+    button.click();
+  }
+  public addEducacion(addForm: NgForm){
+    document.getElementById('add-educacion-form')?.click();
+    this.educacionService.addEducacion(addForm.value);
+  }
+
 }
-
-
 export interface Educacion{
   idEdu:number;
   tituloEdu:string;

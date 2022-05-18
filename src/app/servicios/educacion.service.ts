@@ -23,3 +23,4 @@ export class EducacionService {
     return this.http.delete<void>(`${this.apiServerUrl}/educacion/deldete/${educacionId}`);
   }
 }
+

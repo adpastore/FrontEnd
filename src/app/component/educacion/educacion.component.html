@@ -1,3 +1,12 @@
+<div>
+<div class="text-center">
+    <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
+      <a class="nav-link" style="color:aliceblue">
+        Agregar educación<span class="sr-only"> (current) </span>
+      </a>
+    </button>
+  </div>
+</div>
 <div class="row align-items" *ngFor="let educacion of educaciones">
   <div class="col-3">
   <h3>Educacion</h3>
@@ -31,4 +40,5 @@
     </ul>
 
   </div>
+</div>
 </div>
