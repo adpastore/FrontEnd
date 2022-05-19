@@ -43,7 +43,7 @@ export class EducacionComponent implements OnInit {
       button.setAttribute('data-target', '#deleteEducacionModal')
     } else if (mode === 'edit') {
       this.editarEducacion = educacion;
-      button.setAttribute('data-target', '#editEducacionModal')
+      button.setAttribute('data-target', '#editarEducacionModal')
     }
     container?.appendChild(button);
     button.click();

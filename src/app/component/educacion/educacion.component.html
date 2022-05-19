@@ -181,11 +181,12 @@
     role="dialog"
     aria-labelledby="editarEducacionModalLabel"
     aria-hidden="true"
->
-  <div class="modal-dialog" role="document">
+    >
+    
+<!-- Renglon para id -->
+    <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-<!-- Renglon para id -->
         <h5 class="modal-title" id="editarEducacionModalLabel">
           Editar Educación{{ editarEducacion?.tituloEdu }}
         </h5>
@@ -313,7 +314,7 @@
 <div
 data-bs-toggle="modal"data-bs-target="#deleteModelLabel"
   class="modal fade"
-  id="deleteEducationModal"
+  id="deleteEducacionModal"
   tabindex="-1"
   role="dialog"
   aria-labelledby="deleteModelLabel"
@@ -322,7 +323,7 @@ data-bs-toggle="modal"data-bs-target="#deleteModelLabel"
   <div class="modal-dialog"role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"id="deleteModelLabel">Delete Education</h5>
+        <h5 class="modal-title"id="deleteModelLabel">Borrar Education</h5>
         <button
           type="button"
           class="close"
@@ -334,7 +335,7 @@ data-bs-toggle="modal"data-bs-target="#deleteModelLabel"
       </div>
       <div class="modal-body">
         <p>
-          Are you sure you want to delete education
+          Está seguro de borrar esta educación:
           {{deleteEducacion?.tituloEdu}}?
           </p>
           <div class="modal-footer">
@@ -350,7 +351,7 @@ data-bs-toggle="modal"data-bs-target="#deleteModelLabel"
           class="btn btn-danger"
           data-dismiss="modal"
           >
-          Yes
+          Si
           </button>
           </div>
       </div>
@@ -364,5 +365,5 @@ data-bs-toggle="modal"data-bs-target="#deleteModelLabel"
     <p>No se encontró.</p>
   </div>
 </div>
-</div>
+
 
