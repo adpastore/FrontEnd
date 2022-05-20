@@ -24,7 +24,7 @@ div{
   #miFoto{
     top: 24%;
     left: 5%;
-    width: 10%;
+    width: 60%;
     border-radius: 100%;
     box-shadow: 3.75PX 3.75PX 3.75PX #483e3c;
     position:absolute;
@@ -35,9 +35,9 @@ div{
 /*Tablet - Portrait*/
   @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait){
     #miFoto{
-      top: 23%;
+      margin-top: -40%;
       left: 5%;
-      width: 10%;
+      width: 60%;
       border-radius: 100%;
       box-shadow: 3.75PX 3.75PX 3.75PX #483e3c;
       position: absolute;
@@ -47,9 +47,9 @@ div{
     /*landscape*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation:landscape) {
   #miFoto{
-      top: 40%;
+      top: -40%;
       left: 5%;
-      width: 10%;
+      width: 60%;
       border-radius: 100%;
       box-shadow: 3.75PX 3.75PX 3.75PX #483e3c;
       position: absolute;
@@ -59,9 +59,9 @@ div{
 /*Escritorio*/
 @media (min-width: 1199.98px) and (max-width: 1680px)and (orientation:landscape) {
   #miFoto{
-    top: 47%;
+    top: -47%;
     left: 5%;
-    width: 10%;
+    width: 60%;
     border-radius: 100%;
     box-shadow: 3.75PX 3.75PX 3.75PX #483e3c;
     position: absolute;

@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Educacion, EducacionService } from '../../servicios/educacion.service';
+import { Educacion, EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -31,7 +31,7 @@ export class EducacionComponent implements OnInit {
   }
   // Implementacion Modal
   public onOpenModal(mode: string, educacion?: Educacion): void {
-    
+
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type='button';
