@@ -6,9 +6,16 @@ color: #aba292;
 
 #nombre{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     color: #aba292;
+    margin-top: 27%;
+    margin-left: -10%;
 }
+
+#titulo{
+  margin-left: -10%;
+}
+
 #miFoto{
 max-width: 80%;
 margin-top: 7%;
@@ -19,6 +26,7 @@ div{
   background-color: #151c2d;
 }
 
+/* ESTILOS DE LA FOTO DE PERFIL SEGUN LOS TAMAÑOS DE PANALLA */
 /*movil - Portrait - Default*/
 @media (max-width: 575.98px) and (orientation:landscape){
   #miFoto{

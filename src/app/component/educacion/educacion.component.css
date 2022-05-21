@@ -4,8 +4,19 @@
 div{
   background-color: #e3d6d0;
 }
-h2, h3 {
+h1{
+  font-weight: 700;
+
+}
+h2{
   display: inline;
+}
+h3 {
+  display: inline;
+  margin-right: 5%;
+}
+#agregar{
+  display: flexbox;
 }
 img{
   width: 200px;
@@ -22,7 +33,7 @@ img{
   color: #fff;
   background-color: #151c2d;
   border-color: #393437;
-  width: 200px;
+  width:  200px;
   height: 60px;
   margin-left: 90%;
 }

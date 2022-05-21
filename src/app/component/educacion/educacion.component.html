@@ -1,77 +1,74 @@
-<div class="row edu main-container">
-  <h1>Educacion</h1>
-  <div class="text-center">
-    <button
-        type="button"
-        class="btn btn-success"
-        (click)="onOpenModal('add')"
-        >
-      <a
-        class="nav-link"
-        style="color: aliceblue"
-      >Agregar educación
-      <span class="sr-only">
-        (current)
-      </span></a>
-    </button>
-  </div>
-  <div id="main-container">
-    <div *ngFor="let educacion of educaciones" class="col-g-12">
-      <div class="container">
-        <div class="row aling-items-start">
-          <div class="col">
-            <img alt="Imagen educacion" src="{{ educacion.imagenEdu }}"/>
-          </div>
-          <div class="col">
-            <h3>{{ educacion.tituloEdu }}</h3>
-          </div>
-          <div class="col text-center">
-            <h3>{{ educacion.fechaIniEdu }} - {{educacion.fechaFinEdu}}</h3>
-
-<!-- boton editar -->
-
+<h1 class="text-center">Instrucciones</h1>
+<div class="container">
+  <div class="row">
+    <div id="agregar" class="col-md-12">
+      <div class="col-md-2" >
+        
+        <!-- boton Agregar educacion -->
+        <button
+          id="botAgr"
+            type="button"
+            class="btn btn-success"
+            (click)="onOpenModal('add')"   >
           <a
-          (click)="onOpenModal('edit', educacion)"
-              class="btn btn-primary tooltips"
-              data-placement="top"
-              data-toggle="tooltip"
-              data-original-title="Edit"
-            ><em class="fa fa-pencil"></em>
-          </a>
+            class="nav-link"
+            style="color: aliceblue"
+          >Agregar educación
+          <span class="sr-only">(current)</span>
+        </a>
+        </button>
 
-<!-- boton borrar -->
-
-          <a
-          (click)="onOpenModal('delete', educacion)"
-          class="btn btn-secondary tooltips"
-          data-placement="top"
-          data-toggle="tooltip"
-          data-original-title="Delete"
-          ><em class="fa fa-times"></em>
-          </a>
-
-          </div>
-        </div>
-      </div>
-        <div class="row">
-              <p>{{educacion.descEdu}}</p>
-              <ul>
-                <li>
-                  <h2>{{ educacion.sedeEdu }}</h2>
-                  -
-                  <h3>{{ educacion.fechaIniEdu }} {{ educacion.fechaFinEdu }}</h3>
-                </li>
-              </ul>
-              <div class="col-12">
-                <ul>
-                  <p>{{ educacion.tituloEdu }} -> {{ educacion.descEdu }}</p>
-                </ul>
-              </div>
-            </div>
-        </div>
       </div>
     </div>
+    <div id="main-container">
+      <div *ngFor="let educacion of educaciones">
+        <div class="col-12">
+          <div class="row aling-items-start">
+            <div class="col-md-2" >
+              <img alt="Imagen educacion" src="{{ educacion.imagenEdu }}"/>
+            </div>
+            <div class="col-md-2">
+              <h3>{{ educacion.tituloEdu }}</h3>
+            </div>
+            <div class="col-md-8" >
+              <h3>{{ educacion.fechaIniEdu }} - {{educacion.fechaFinEdu}} </h3>
 
+      <!-- boton editar -->
+            <a
+            (click)="onOpenModal('edit', educacion)"
+                class="btn btn-primary tooltips"
+                data-placement="top"
+                data-toggle="tooltip"
+                data-original-title="Edit"
+              ><em class="fa fa-pencil"></em>
+            </a>
+
+      <!-- boton borrar -->
+            <a
+            (click)="onOpenModal('delete', educacion)"
+            class="btn btn-secondary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Delete"
+            ><em class="fa fa-times"></em>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="row" >
+                <h2>{{educacion.descEdu}}</h2>
+                <ul>
+                  <h2>{{ educacion.sedeEdu }}</h2>
+                </ul>
+
+              </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>   <!-- fin de diseño de pantalla de INSTRUCCIONES-->
 
 <!--Modal de agregar educacion-->
 <div class="modal fade"
