@@ -1,38 +1,39 @@
+<div class="contInst">
 <h1 class="text-center">Instrucciones</h1>
-
-  <div class="row">
-    <div id="agregar" class="col-md-12">
-      <div class="col-md-2" >
-
         <!-- boton Agregar educacion -->
         <button
           id="botAgr"
             type="button"
-            class="btn btn-success"
+            class="btn btn-success agrEdu"
             (click)="onOpenModal('add')"   >
           <a
-            class="nav-link"
+
             style="color: aliceblue"
           >Agregar educación
           <span class="sr-only">(current)</span>
         </a>
         </button>
+</div>
 
-      </div>
-    </div>
+<div class="row">
     <div id="main-container">
-      <div *ngFor="let educacion of educaciones">
-        <div class="col-12">
-          <div class="row aling-items-start">
-            <div class="col-md-2" >
+      <div *ngFor="let educacion of educaciones" class="contGen">
+        <div class="div1">
               <img alt="Imagen educacion" src="{{ educacion.imagenEdu }}"/>
-            </div>
-            <div class="col-md-2">
+        </div>
+            <div class="div2">
+              <div class="div2a">
               <h3>{{ educacion.tituloEdu }}</h3>
             </div>
-            <div class="col-md-8" >
-              <h3>{{ educacion.fechaIniEdu }} - {{educacion.fechaFinEdu}} </h3>
-
+            <div class="div2b">
+              <h6>{{educacion.descEdu}}</h6>
+            </div>
+            </div> <!-- FIN DE DIV 2 -->
+            <div class="div3" >
+              <h2>{{ educacion.sedeEdu }}</h2>
+            </div> <!-- FIN DE DIV 3 -->
+            <div class="div4">
+              <div class="div4a">
       <!-- boton editar -->
             <a
             (click)="onOpenModal('edit', educacion)"
@@ -52,22 +53,13 @@
             data-original-title="Delete"
             ><em class="fa fa-times"></em>
             </a>
-
-            </div>
           </div>
-
-          <div class="row" >
-                <h2>{{educacion.descEdu}}</h2>
-                <ul>
-                  <h2>{{ educacion.sedeEdu }}</h2>
-                </ul>
-
-              </div>
+          <div class="div4b">
+            <h3>{{ educacion.fechaIniEdu }} - {{educacion.fechaFinEdu}} </h3>
+          </div>
+          </div> <!-- FIN DE DIV 4 -->
       </div>
     </div>
-  </div>
-
-
 </div>   <!-- fin de diseño de pantalla de INSTRUCCIONES-->
 
 <!--Modal de agregar educacion-->
