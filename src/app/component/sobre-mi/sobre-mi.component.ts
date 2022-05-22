@@ -1,31 +1,23 @@
-import { SobremiService } from './../../servicios/sobremi.service';
+import { UsuarioService } from '../../servicios/usuario.service';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './../../models/usuario';
-import { HttpErrorResponse } from '@angular/common/http';
+import { Usuario } from '../../models/usuario';
+
 @Component({
-  selector: 'app-sobre-mi',
+  selector: 'app-',
   templateUrl: './sobre-mi.component.html',
   styleUrls: ['./sobre-mi.component.css']
 })
-export class SobreMiComponent implements OnInit {
-
+export class UsuarioComponent implements OnInit {
+  public usuarios: Usuario[] = [];
   public usuario : Usuario | undefined;
-  public editUsuario : Usuario | undefined;
+  public editarUsuario : Usuario | undefined;
 
-  constructor(private sobremiService : SobremiService) { }
+  constructor(private UsuarioService : UsuarioService) { }
 
   ngOnInit(): void {
-    this.getUser();
+
   }
-  public getUser():void{
-    this.sobremiService.getUser().subscribe({
-    next: (response: Usuario) =>{
-      this.usuario=response;
-    },
-    error:(error:HttpErrorResponse)=>{
-    alert(error.message);
-    }
-  })
-  }
+
+
 
 }
