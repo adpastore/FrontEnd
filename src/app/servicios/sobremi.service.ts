@@ -15,7 +15,10 @@ export class SobremiService {
   public getUser():Observable<Usuario>{
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
   }
-public updateUsuario(usuario: Usuario):Observable<Usuario>{
+  public editarEUsuario(usuario: Usuario):Observable<Usuario>{
+    return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/editar`, usuario);
+    }
+  public updateUsuario(usuario: Usuario):Observable<Usuario>{
   return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
-}
+  }
 }
