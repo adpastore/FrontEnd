@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LogoAPComponent } from './component/logo-ap/logo-ap.component';
 import {HeaderComponent} from './component/header/header.component';
 import { BannerComponent } from './component/banner/banner.component';
-import { UsuarioComponent } from './component/sobre-mi/sobre-mi.component';
+import { SobreMiComponent } from './component/sobre-mi/sobre-mi.component';
 import { ExperienciaComponent } from './component/experiencia/experiencia.component';
 import { EducacionComponent } from './component/educacion/educacion.component';
 import { FormsModule } from '@angular/forms';
@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     LogoAPComponent,
     HeaderComponent,
     BannerComponent,
-    UsuarioComponent,
+    SobreMiComponent,
     ExperienciaComponent,
     EducacionComponent,
     PotenciasComponent,
