@@ -56,7 +56,7 @@
   /* ESTILOS DE LA FOTO DE PERFIL SEGUN LOS TAMAÑOS DE PANALLA */
   /*movil - Portrait - Default*/
   @media (max-width: 575.98px) and (orientation:landscape){
-    #miFoto{
+    .miFoto{
       top: 24%;
       left: 5%;
       width: 60%;
@@ -69,7 +69,7 @@
 
   /*Tablet - Portrait*/
     @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait){
-      #miFoto{
+      .miFoto{
         margin-top: -40%;
         left: 5%;
         width: 60%;
@@ -81,7 +81,7 @@
 
       /*landscape*/
   @media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation:landscape) {
-    #miFoto{
+    .miFoto{
         top: -40%;
         left: 5%;
         width: 60%;
@@ -93,7 +93,7 @@
 
   /*Escritorio*/
   @media (min-width: 1199.98px) and (max-width: 1680px)and (orientation:landscape) {
-    #miFoto{
+    .miFoto{
       top: -47%;
       left: 5%;
       width: 60%;
