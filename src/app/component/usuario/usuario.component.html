@@ -11,6 +11,8 @@
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-3" >
     <p class="nombre">{{ usuario.nombre }} {{ usuario.apellido }}</p>
     <p class="titulo">{{ usuario.titulo }}</p>
+    <p class="titulo">{{ usuario.mail }}</p>
+    <p class="titulo">{{ usuario.telefono }}</p>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7" class="col text-center">
     <a
@@ -171,7 +173,67 @@
             name="telefono"
             class="form-control"
             id="telefono"
-            placeholder=" Teléfono "
+            placeholder=" Telefono "
+          />
+      </div>
+
+      <!-- Renglon para el mail -->
+      <div class="form-group">
+        <label for="mail"> Mail </label>
+          <input type="text"
+            ngModel="{{editarUsuario?.mail}}"
+            name="mail"
+            class="form-control"
+            id="mail"
+            placeholder=" Mail "
+          />
+      </div>
+
+      <!-- Renglon para el facebook -->
+      <div class="form-group">
+        <label for="facebook"> Facebook </label>
+          <input type="text"
+            ngModel="{{editarUsuario?.mail}}"
+            name="facebook"
+            class="form-control"
+            id="facebook"
+            placeholder=" Facebook "
+          />
+      </div>
+
+      <!-- Renglon para el github -->
+      <div class="form-group">
+        <label for="github"> Github </label>
+          <input type="text"
+            ngModel="{{editarUsuario?.github}}"
+            name="github"
+            class="form-control"
+            id="github"
+            placeholder=" Github "
+          />
+      </div>
+
+      <!-- Renglon para el instagram -->
+      <div class="form-group">
+        <label for="instagram"> Instagram </label>
+          <input type="text"
+            ngModel="{{editarUsuario?.instagram}}"
+            name="instagram"
+            class="form-control"
+            id="instagram"
+            placeholder=" Instagram "
+          />
+      </div>
+
+      <!-- Renglon para el imagen -->
+      <div class="form-group">
+        <label for="imagen"> Imagen de fondo </label>
+          <input type="text"
+            ngModel="{{editarUsuario?.imagen}}"
+            name="imagen"
+            class="form-control"
+            id="imagen"
+            placeholder=" Imagen de fondo "
           />
       </div>
 

@@ -37,7 +37,7 @@ export interface Usuario {
   acerca: string;
   acercas: string;
   acercas2: string;
-  telefono: number;
+  telefono: string;
   mail: string;
   facebook: string;
   github: string;
