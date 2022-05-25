@@ -1,4 +1,18 @@
-.row {
-  display: inline;
+.contInst{
+  text-align: center;
+}
+.contPot {
+  justify-content: center;
+}
 
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editar{
+  width: 45px;
+}
+.borrar{
+  width: 45px;
 }
