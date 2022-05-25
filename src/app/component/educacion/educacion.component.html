@@ -28,12 +28,12 @@
       <div class="div4">
         <div class="div4a">
           <!-- boton editar -->
-          <a (click)="onOpenModal('edit', educacion)" class="btn btn-primary tooltips" data-placement="top"
+          <a (click)="onOpenModal('edit', educacion)" class="btn btn-primary tooltips editar" data-placement="top"
             data-toggle="tooltip" data-original-title="Edit"><em class="fa fa-pencil"></em>
           </a>
 
           <!-- boton borrar -->
-          <a (click)="onOpenModal('delete', educacion)" class="btn btn-secondary tooltips" data-placement="top"
+          <a (click)="onOpenModal('delete', educacion)" class="btn btn-secondary tooltips borrar" data-placement="top"
             data-toggle="tooltip" data-original-title="Delete"><em class="fa fa-times"></em>
           </a>
         </div>
@@ -203,10 +203,10 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">
+            <button type="button" id="" data-dismiss="modal" class="btn btn-secondary cierra" >
               Cerrar
             </button>
-            <button (click)="onUpdateEducacion(editForm.value)" data-dismiss="modal" class="btn btn-primary">
+            <button (click)="onUpdateEducacion(editForm.value)" data-dismiss="modal" class="btn btn-primary guarda">
               Guardar cambios
             </button>
           </div>

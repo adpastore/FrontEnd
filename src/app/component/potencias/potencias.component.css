@@ -10,9 +10,16 @@
   flex-direction: column;
   align-items: center;
 }
-.editar{
+.editar, .borrar{
   width: 45px;
 }
-.borrar{
-  width: 45px;
+
+.btn-success {
+  color: #fff;
+  background-color: #151c2d;
+  border-color: #393437;
+  width:  200px;
+  height: 60px;
+  align-items: center;
 }
+
