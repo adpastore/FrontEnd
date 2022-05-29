@@ -36,18 +36,11 @@ img{
 #boton{
   margin-right: 15px;
 }
-.editar, .borrar{
-  width: 45px;
-}
 
-.btn-success {
-  color: #fff;
-  background-color: #151c2d;
-  border-color: #393437;
-  width:  200px;
-  height: 60px;
-  margin-left: 40%;
-}
+
+
+
+
 
  /*
  #perfil {

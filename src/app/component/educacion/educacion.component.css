@@ -97,14 +97,3 @@ img{
   height: 60px;
   margin-left: 90%;
 }
-.editar, .borrar{
-  width: 45px;
-}
-.cierra, .guarda {
-  color: #fff;
-  background-color: #151c2d;
-  border-color: #393437;
-  width:  200px;
-  height: 60px;
-  margin-left: 40%;
-}

@@ -1,25 +1,4 @@
-.contInst{
-  text-align: center;
-}
-.contPot {
-  justify-content: center;
-}
+.row {
+  display: inline;
 
-.main-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.editar, .borrar{
-  width: 45px;
-}
-
-.btn-success {
-  color: #fff;
-  background-color: #151c2d;
-  border-color: #393437;
-  width:  200px;
-  height: 60px;
-  align-items: center;
-}
-

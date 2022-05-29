@@ -4,7 +4,7 @@
   color: #aba292;
   }
 
-  .nombre{
+  #nombre{
       font-weight: bold;
       font-size: 30px;
       color: #aba292;
@@ -12,51 +12,24 @@
       margin-left: -10%;
   }
 
-  .titulo{
+  #titulo{
     margin-left: -10%;
   }
 
-  .miFoto{
+  #miFoto{
   max-width: 80%;
   margin-top: 7%;
   }
 
   /*Color de fondo de pagina*/
-  .containerGen{
+  div{
     background-color: #151c2d;
   }
-
-  .btn{
-    width: 50px;
-    height: 50px;
-  }
-  .btn-primary{
-    width: 50px;
-    height: 50px;
-  }
-  .guardar, .cerrar{
-    width: 80px;
-    line-height: 20px;
-  }
-
-  .btn-success {
-    color: #fff;
-    background-color: #151c2d;
-    border-color: #393437;
-    width:  200px;
-    height: 60px;
-    margin-left: 90%;
-  }
-
-  .modal, .modal div {
-    background-color: #e3d6d0;
-  }
-
 
   /* ESTILOS DE LA FOTO DE PERFIL SEGUN LOS TAMAÑOS DE PANALLA */
   /*movil - Portrait - Default*/
   @media (max-width: 575.98px) and (orientation:landscape){
-    .miFoto{
+    #miFoto{
       top: 24%;
       left: 5%;
       width: 60%;
@@ -69,7 +42,7 @@
 
   /*Tablet - Portrait*/
     @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait){
-      .miFoto{
+      #miFoto{
         margin-top: -40%;
         left: 5%;
         width: 60%;
@@ -81,7 +54,7 @@
 
       /*landscape*/
   @media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation:landscape) {
-    .miFoto{
+    #miFoto{
         top: -40%;
         left: 5%;
         width: 60%;
@@ -93,7 +66,7 @@
 
   /*Escritorio*/
   @media (min-width: 1199.98px) and (max-width: 1680px)and (orientation:landscape) {
-    .miFoto{
+    #miFoto{
       top: -47%;
       left: 5%;
       width: 60%;

@@ -7,37 +7,31 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl=environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
-  public getUsuario(): Observable<Usuario> {
+  public getUsuario():Observable<Usuario>{
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
   }
-  public editarUsuario(usuario: Usuario): Observable<Usuario> {
+  public editarUsuario(usuario: Usuario):Observable<Usuario>{
     return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/editar`, usuario);
-  }
-  public addUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(`${this.apiServerUrl}/usuario/add`, usuario);
-  }
-  public updateUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
-  }
-  public deleteUsuario(usuarioId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/usuario/delete/${usuarioId}`);
+    }
+  public updateUsuario(usuario: Usuario):Observable<Usuario>{
+  return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
   }
 }
 
-export interface Usuario {
+export interface Usuario{
   id: number;
   nombre: string;
   apellido: string;
   titulo: string;
-  fotoPerfil: string;
+  fotoPeril: string;
   acerca: string;
   acercas: string;
   acercas2: string;
-  telefono: string;
+  telefono: number;
   mail: string;
   facebook: string;
   github: string;
