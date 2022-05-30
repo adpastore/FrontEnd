@@ -1,0 +1,36 @@
+<div class="row" *ngIf="usuario">
+  <!-- forma de presentarse en diferentes dispositivos -->
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img
+      alt="foto_portada"
+      src="../../../assets/fotoperfil.jpg "
+      class="img-fluid"
+      id="miFoto"
+    />
+  </div>
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-3" >
+    <p id="nombre">{{ usuario.nombre }} {{ usuario.apellido }}</p>
+    <p id="titulo">{{ usuario.titulo }}</p>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7" class="col text-center">
+    <a
+      class="btn btn-primary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="edit"
+      ><em class="fa fa-pencil"></em>
+    </a>
+    <a
+      class="btn btn-secondary tooltips"
+      data-placement="top"
+      data-toggle="tooltip"
+      data-original-title="delete"
+      ><em class="fa fa-times"></em>
+    </a>
+    <span>
+      <h1>Acerca de mi</h1>
+      <p>{{ usuario.acerca }} {{ usuario.acercas }} {{ usuario.acercas2 }}</p>
+    </span>
+  </div>
+</div>
+

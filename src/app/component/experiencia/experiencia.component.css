@@ -1,9 +1,104 @@
 .row{
   padding: 15px;
+  margin: 0 auto;
+}
+.text-center{
+  line-height: 150px;
+  margin: 0%;
+}
+
+.contInst{
+  position: relative;
+  height: fit-content;
+}
+.agrExp{
+  position: absolute;
+  right: 5%;
+  top: 35%;
+}
+
+.contGen{
+  display: flex;
+  margin-bottom: 3%;
+  justify-content: space-around;
+}
+
+#main-container{
+width: 100%;
 }
 div{
   background-color: #e3d6d0;
 }
-h2, h3 {
-  display: inline;
+.div1{
+  max-width: 200px;
+  width: 100%;
 }
+.div2{
+  max-width: 200px;
+  width: 100%;
+}
+.div3{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.div3a{
+  display: flex;
+  justify-content: center;
+}
+.div3b{
+  width: max-content;
+  margin: 0 auto;
+}
+
+.div4{
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.div4a{
+  display: flex;
+  justify-content: center;
+}
+.div4b{
+  width: max-content;
+  margin: 0 auto;
+}
+
+h1{
+  font-weight: 700;
+
+}
+h2{
+  display: inline;
+
+}
+h3 {
+  display: inline;
+
+}
+
+img{
+  width: 200px;
+}
+.btn{
+  width: 50px;
+  height: 50px;
+}
+.btn-primary{
+  width: 50px;
+  height: 50px;
+}
+.btn-success {
+  color: #fff;
+  background-color: #151c2d;
+  border-color: #393437;
+  width:  200px;
+  height: 60px;
+  margin-left: 40%;
+}
+
