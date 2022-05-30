@@ -102,3 +102,6 @@ img{
   margin-left: 40%;
 }
 
+.editar, .borrar{
+  width: 45px;
+}

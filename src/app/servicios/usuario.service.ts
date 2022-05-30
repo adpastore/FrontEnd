@@ -14,8 +14,14 @@ export class UsuarioService {
   public getUsuario():Observable<Usuario>{
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
   }
+  public addUsuario(usuario: Usuario):Observable<Usuario>{
+    return this.http.post<Usuario>(`${this.apiServerUrl}/usuario/add`, usuario);
+    }
   public editarUsuario(usuario: Usuario):Observable<Usuario>{
     return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/editar`, usuario);
+    }
+    public deleteUsuario(usuarioId: number):Observable<void>{
+      return this.http.delete<void>(`${this.apiServerUrl}/usuario/delete/${usuarioId}`);
     }
   public updateUsuario(usuario: Usuario):Observable<Usuario>{
   return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
@@ -27,7 +33,7 @@ export interface Usuario{
   nombre: string;
   apellido: string;
   titulo: string;
-  fotoPeril: string;
+  fotoPerfil: string;
   acerca: string;
   acercas: string;
   acercas2: string;
