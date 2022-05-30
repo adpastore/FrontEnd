@@ -25,6 +25,10 @@
   .containerGen{
     background-color: #151c2d;
   }
+  .lapiz{
+    background-color: #151c2d;
+    border-color: #151c2d;
+  }
 
   .btn{
     width: 50px;

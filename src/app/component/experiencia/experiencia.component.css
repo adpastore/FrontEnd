@@ -6,7 +6,10 @@
   line-height: 150px;
   margin: 0%;
 }
-
+.lapiz, .cruz{
+  background-color: #e3d6d0;
+  border-color: #e3d6d0;
+}
 .contInst{
   position: relative;
   height: fit-content;
