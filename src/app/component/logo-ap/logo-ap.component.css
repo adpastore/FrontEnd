@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow:hidden;
 }
+
 .logo{
   display: flex;
   height: 80%;
@@ -35,6 +37,7 @@ img{
 
 #boton{
   margin-right: 15px;
+
 }
 
 
