@@ -1,4 +1,6 @@
+import { PorfolioService } from './../../servicios/portfolio.service';
 import { Component, OnInit, Injectable } from '@angular/core';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit, Injectable } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
+  miPortfolio:any;
 
+  constructor(private datosPortfolio:PorfolioService) { }
 
-  constructor() { }
-
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+      console.log("Datos personales"+ JSON.stringify(data));
+      this.miPortfolio=data[0];
+    })
+   }
 }
