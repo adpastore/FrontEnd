@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class PorfolioService {
-  url:string="http://npinti.ddns.net:9088/api/";
+  url:string="http://localhost:8080/api/";
   constructor(private http:HttpClient) {}
 
 obtenerDatos():Observable<any>
 {
-  return this.http.get<any>(this.url+"persona");
+  return this.http.get<any>(this.url+"usuario");
   }
 }

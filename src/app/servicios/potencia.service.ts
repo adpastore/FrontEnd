@@ -7,21 +7,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PotenciaService {
-  private apiServerUrl='http://localhost:8080';
+  private apiServerUrl='http://localhost:8080/api/potencias';
 
   constructor(private http: HttpClient) { }
 
   public getPotencia():Observable<Potencias[]>{
-  return this.http.get<Potencias[]>(`${this.apiServerUrl}/potencias/all`);
+  return this.http.get<Potencias[]>(`${this.apiServerUrl}/api/potencias/all`);
   }
   public editarPotencia(potencias: Potencias):Observable<Potencias>{
-  return this.http.put<Potencias>(`${this.apiServerUrl}/potencias/editar`, potencias);
+  return this.http.put<Potencias>(`${this.apiServerUrl}/api/potencias/editar`, potencias);
   }
   public addPotencia(potencias: Potencias):Observable<Potencias>{
-    return this.http.post<Potencias>(`${this.apiServerUrl}/potencias/add`, potencias);
+    return this.http.post<Potencias>(`${this.apiServerUrl}/api/potencias/add`, potencias);
     }
   public deletePotencia(potenciaId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/potencias/delete/${potenciaId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/api/potencias/delete/${potenciaId}`);
   }
 }
 export interface Potencias{

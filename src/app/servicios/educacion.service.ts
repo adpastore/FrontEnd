@@ -7,21 +7,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  private apiServerUrl='http://localhost:8080';
+  private apiServerUrl='http://localhost:8080/api/educacion';
 
   constructor(private http: HttpClient) { }
 
   public getEducacion():Observable<Educacion[]>{
-  return this.http.get<Educacion[]>(`${this.apiServerUrl}/educacion/all`);
+  return this.http.get<Educacion[]>(`${this.apiServerUrl}/api/educacion/all`);
   }
   public editarEducacion(educacion: Educacion):Observable<Educacion>{
-  return this.http.put<Educacion>(`${this.apiServerUrl}/educacion/editar`, educacion);
+  return this.http.put<Educacion>(`${this.apiServerUrl}/api/educacion/editar`, educacion);
   }
   public addEducacion(educacion: Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(`${this.apiServerUrl}/educacion/add`, educacion);
+    return this.http.post<Educacion>(`${this.apiServerUrl}/api/educacion/add`, educacion);
     }
   public deleteEducacion(educacionId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/educacion/delete/${educacionId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/api/educacion/delete/${educacionId}`);
   }
 }
 export interface Educacion{

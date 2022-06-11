@@ -17,11 +17,9 @@ export class GuardGuard implements CanActivate {
     if (currentUser && currentUser.accessToken)
     {
       return true;
-  }
-  else
-  {
+    } else {
     this.rutas.navigate(['/iniciar-sesion']);
     return false;
+    }
   }
-}
 }

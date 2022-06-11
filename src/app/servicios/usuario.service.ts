@@ -6,24 +6,24 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiServerUrl='http://localhost:8080';
+  private apiServerUrl='http://localhost:8080/api/usuario';
 
   constructor(private http: HttpClient) { }
 
   public getUsuario():Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`);
+    return this.http.get<Usuario>(`${this.apiServerUrl}/api/usuario/id/1`);
   }
   public addUsuario(usuario: Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>(`${this.apiServerUrl}/usuario/add`, usuario);
+    return this.http.post<Usuario>(`${this.apiServerUrl}/api/usuario/add`, usuario);
     }
   public editarUsuario(usuario: Usuario):Observable<Usuario>{
-    return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/editar`, usuario);
+    return this.http.put<Usuario>(`${this.apiServerUrl}/api/usuario/editar`, usuario);
     }
     public deleteUsuario(usuarioId: number):Observable<void>{
-      return this.http.delete<void>(`${this.apiServerUrl}/usuario/delete/${usuarioId}`);
+      return this.http.delete<void>(`${this.apiServerUrl}/api/usuario/delete/${usuarioId}`);
     }
   public updateUsuario(usuario: Usuario):Observable<Usuario>{
-  return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update`, usuario);
+  return this.http.put<Usuario>(`${this.apiServerUrl}/api/usuario/update`, usuario);
   }
 }
 
