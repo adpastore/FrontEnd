@@ -1,0 +1,11 @@
+.portadafondo{
+  width: 100%;
+  height: 100vh;
+}
+.entrada{
+  background-color: #b4b4b6;
+  border-radius: 14px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
