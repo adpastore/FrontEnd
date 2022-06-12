@@ -10,19 +10,18 @@ import { Autenticacionservice } from 'src/app/servicios/autenticacion.service';
 })
 export class IniciarSesionComponent implements OnInit {
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder,
-              private autenticacionService: Autenticacionservice,
-              private rutas: Router){
+  constructor(private formBuilder:FormBuilder,
+    private autenticacionService:Autenticacionservice,
+    private ruta:Router) {
     this.form = this.formBuilder.group(
       {
-      email: ['adpastore@gmail.com', [Validators.required, Validators.email]],
-      password: ['123456', [Validators.required, Validators.minLength(6)]],
-  })
+        email: ['adpastore@gmail.com', [Validators.required, Validators.email]],
+        password: ['123456', [Validators.required, Validators.minLength(6)]],
+      })
 
   }
 
   ngOnInit(): void {
-
   }
 
   get Email() {
@@ -33,11 +32,11 @@ export class IniciarSesionComponent implements OnInit {
     return this.form.get('123456');
   }
 
-  onEnviar(event: Event) {
-    event.defaultPrevented;
-    this.autenticacionService.IniciarSesion(this.form.value).subscribe((data: any)=>{
-        console.log('DATA:' + JSON.stringify(data));
-        this.rutas.navigate(['/portfolio']);
-      })
+  onEnviar(event:Event) {
+    event.preventDefault;
+    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data => {
+      console.log("DATA:" + JSON.stringify(data));
+      this.ruta.navigate(['/portfolio']);
+    })
   }
 }

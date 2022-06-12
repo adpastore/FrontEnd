@@ -1,4 +1,4 @@
-<div class="row containerGen" *ngIf="usuario">
+<div class="row containerGen" *ngIf="usuarios">
   <!-- forma de presentarse en diferentes dispositivos -->
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
     <img
@@ -9,14 +9,14 @@
     />
   </div>
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" >
-    <p class="nombre">{{ usuario.nombre }} {{ usuario.apellido }}</p>
-    <p class="titulo">{{ usuario.titulo }}</p>
-    <p class="titulo">{{ usuario.mail }}</p>
-    <p class="titulo">{{ usuario.telefono }}</p>
+    <p class="nombre">{{ usuarios[0].nombre }} {{ usuarios[0].apellido }}</p>
+    <p class="titulo">{{ usuarios[0].titulo }}</p>
+    <p class="titulo">{{ usuarios[0].mail }}</p>
+    <p class="titulo">{{ usuarios[0].telefono }}</p>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-7" class="col text-center">
     <a
-    (click)="onOpenModal('edit', usuario)"
+    (click)="onOpenModal('edit', usuarios[0])"
       class="btn btn-primary tooltips lapiz"
       data-placement="top"
       data-toggle="tooltip"
@@ -25,7 +25,7 @@
     </a>
     <span>
       <h1>Acerca de mi</h1>
-      <p>{{ usuario.acerca }} {{ usuario.acercas }} {{ usuario.acercas2 }}</p>
+      <p>{{ usuarios[0].acerca }} {{ usuarios[0].acercas }} {{ usuarios[0].acercas2 }}</p>
     </span>
   </div>
 
@@ -255,11 +255,4 @@
 </div>
     </div>
 </div>
-
-<!-- Notification for no employees -->
-  <div *ngif="usuario?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
-  <div class="alert alert-info" role="alert">
-    <h4 class="alert-heading">Sin Usuarios!</h4>
-    <p>No se encontró.</p>
-  </div>
-</div>
+<div>

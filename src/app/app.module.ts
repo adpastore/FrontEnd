@@ -30,9 +30,7 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
     FooterComponent,
     UsuarioComponent,
     IniciarSesionComponent,
-    PortfolioComponent
-
-
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,9 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class UsuarioComponent implements OnInit {
   public usuarios: Usuario[] = [];
-  public usuario: Usuario | undefined;
   public editarUsuario: Usuario | undefined;
   public deleteUsuario: Usuario | undefined;
+
 
   constructor(private usuarioService: UsuarioService) { }
 
@@ -21,8 +21,8 @@ export class UsuarioComponent implements OnInit {
   }
   public getUsuario(): void {
     this.usuarioService.getUsuario().subscribe({
-      next: (response: Usuario) => {
-        this.usuario = response;
+      next: (response: Usuario[]) => {
+        this.usuarios = response;
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
@@ -30,7 +30,7 @@ export class UsuarioComponent implements OnInit {
     })
   }
   // Implementacion Modal
-  public onOpenModal(mode: string, usuario?: Usuario): void {
+  public onOpenModal(mode: string, usuarios?: Usuario): void {
 
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
@@ -40,10 +40,10 @@ export class UsuarioComponent implements OnInit {
     if (mode === 'add') {
       button.setAttribute('data-target', '#addUsuarioModal')
     } else if (mode === 'delete') {
-      this.deleteUsuario = usuario;
+      this.deleteUsuario = usuarios;
       button.setAttribute('data-target', '#deleteUsuarioModal')
     } else if (mode === 'edit') {
-      this.editarUsuario = usuario;
+      this.editarUsuario = usuarios;
       button.setAttribute('data-target', '#editarUsuarioModal')
     }
     container?.appendChild(button);

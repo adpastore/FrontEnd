@@ -12,16 +12,16 @@ export class PotenciaService {
   constructor(private http: HttpClient) { }
 
   public getPotencia():Observable<Potencias[]>{
-  return this.http.get<Potencias[]>(`${this.apiServerUrl}/api/potencias/all`);
+  return this.http.get<Potencias[]>(this.apiServerUrl);
   }
   public editarPotencia(potencias: Potencias):Observable<Potencias>{
-  return this.http.put<Potencias>(`${this.apiServerUrl}/api/potencias/editar`, potencias);
+  return this.http.put<Potencias>(this.apiServerUrl, potencias);
   }
   public addPotencia(potencias: Potencias):Observable<Potencias>{
-    return this.http.post<Potencias>(`${this.apiServerUrl}/api/potencias/add`, potencias);
+    return this.http.post<Potencias>(this.apiServerUrl, potencias);
     }
   public deletePotencia(potenciaId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/api/potencias/delete/${potenciaId}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/delete/${potenciaId}`);
   }
 }
 export interface Potencias{

@@ -13,6 +13,7 @@
         </a>
         </button>
 </div>
+<!-- fin primer sector -->
 
 <div class="row">
     <div id="main-container">
@@ -154,14 +155,13 @@
             <button
               type="button"
               id="add-educacion-form"
-              class="btn btn-secondary"
+              class="btn btn-secondary cierra"
               data-dismiss="modal">
               Cerrar
             </button>
             <button
-              [disabled]="addForm.invalid"
               type="submit"
-              class="btn btn-primary">
+              class="btn btn-primary guarda">
               Guardar cambios
             </button>
         </div>
@@ -361,7 +361,7 @@
 </div>
 
 <!-- Notification for no employees -->
-  <div *ngif="educacion?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+  <div *ngIf="educaciones?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">Sin Educaciones!</h4>
     <p>No se encontró.</p>

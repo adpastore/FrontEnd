@@ -10,20 +10,20 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
 
-  public getUsuario():Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.apiServerUrl}/api/usuario/id/1`);
+  public getUsuario():Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(this.apiServerUrl);
   }
   public addUsuario(usuario: Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>(`${this.apiServerUrl}/api/usuario/add`, usuario);
+    return this.http.post<Usuario>(this.apiServerUrl, usuario);
     }
   public editarUsuario(usuario: Usuario):Observable<Usuario>{
-    return this.http.put<Usuario>(`${this.apiServerUrl}/api/usuario/editar`, usuario);
+    return this.http.put<Usuario>(this.apiServerUrl, usuario);
     }
     public deleteUsuario(usuarioId: number):Observable<void>{
-      return this.http.delete<void>(`${this.apiServerUrl}/api/usuario/delete/${usuarioId}`);
+      return this.http.delete<void>(`${this.apiServerUrl}/delete/${usuarioId}`);
     }
   public updateUsuario(usuario: Usuario):Observable<Usuario>{
-  return this.http.put<Usuario>(`${this.apiServerUrl}/api/usuario/update`, usuario);
+  return this.http.put<Usuario>(this.apiServerUrl, usuario);
   }
 }
 
