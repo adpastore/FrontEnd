@@ -11,8 +11,31 @@
       color: #aba292;
       margin-top: 27%;
       margin-left: -10%;
+      text-transform: uppercase;
+      transition: 0.5s;
   }
 
+    .nombre:hover {
+      color: #fcfdfd;
+      text-shadow: 0 0 5px #5d442c,
+        0 0 25px #ffffff,
+        0 0 50px #ffffff,
+        0 0 100px #ffffff;
+}
+.acerca{
+  font-weight: bold;
+      font-size: 30px;
+      color: #aba292;
+      text-transform: uppercase;
+      transition: 0.5s;
+}
+    .acerca:hover {
+      color: #fcfdfd;
+      text-shadow: 0 0 5px #5d442c,
+        0 0 25px #ffffff,
+        0 0 50px #ffffff,
+        0 0 100px #ffffff;
+}
   .titulo{
     margin-left: -10%;
   }

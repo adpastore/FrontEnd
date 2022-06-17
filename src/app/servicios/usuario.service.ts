@@ -39,6 +39,7 @@ export interface Usuario{
   telefono: number;
   mail: string;
   facebook: string;
+  linkedin: string;
   github: string;
   instagram: string;
   imagen: string;

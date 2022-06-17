@@ -1,5 +1,5 @@
-
-  <div class="banda">
+   <div *ngIf="usuarios">
+   <div class="banda">
     <div class="logo">
       <img alt="Portada" src="../../assets/APLogo-20-20.png" id="ap" />
       <img alt="Inti" src="../../../assets/inti_t.png" id="inti"/>
@@ -7,14 +7,12 @@
     </div>
 
     <div class="iconos">
-      <a href="https://www.facebook.com/boshapo/"target="_blank"><img alt="Facebook" src="../../../assets/facebook_c_t.png" id="face " /></a>
-      <a href="https://github.com/adpastore"target="_blank"><img alt="Github" src="../../../assets/github_c_t.png" id="git"/></a>
-      <a href="https://acortar.link/hw1b2o"target="_blank"><img alt="Linkedin" src="../../../assets/linkedin_c_t.png" id="link"/></a>
-      <a href="https://alvo.chat/qi"target="_blank"><img alt="Whatsapp" src="../../../assets/whatsapp_c_t.png" id="what"/></a>
-      <a href="mailto: adpastore@gmail.com"target="_blank"><img alt="Correo" src="../../../assets/correo_c_t.png" id="correo" /></a>
+      <a href="{{usuarios[0].facebook}}" target="_blank"><img alt="Facebook" src="../../../assets/facebook_c_t.png" id="face " /></a>
+      <a href="{{usuarios[0].github}}"target="_blank"><img alt="Github" src="../../../assets/github_c_t.png" id="git"/></a>
+      <a href="{{usuarios[0].linkedin}}"target="_blank"><img alt="Linkedin" src="../../../assets/linkedin_c_t.png" id="link"/></a>
+      <a href="{{usuarios[0].telefono}}"target="_blank"><img alt="Whatsapp" src="../../../assets/whatsapp_c_t.png" id="what"/></a>
+      <a href="{{usuarios[0].mail}}"target="_blank"><img alt="Correo" src="../../../assets/correo_c_t.png" id="correo" /></a>
       <button type="button" class="btn btn-outline-success" id="boton"><a href="">Logout</a></button>
     </div>
-
   </div>
-
-
+</div>

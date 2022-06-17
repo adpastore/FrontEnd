@@ -2,3 +2,5 @@
   width: 100%;
 }
 
+.contenedor:hover .portadafondo {-webkit-transform:scale(0.9);transform:scale(0.9);transition:all .8s ease-in-out;}
+.contenedor {overflow:hidden;}
