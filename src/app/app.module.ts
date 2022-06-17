@@ -2,7 +2,7 @@ import { InterceptorService } from './servicios/interceptor.service';
 import { PorfolioService } from './servicios/portfolio.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgCircleProgressModule } from 'ng-circle-progress'
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoAPComponent } from './component/logo-ap/logo-ap.component';
@@ -18,6 +18,7 @@ import { UsuarioComponent } from './component/usuario/usuario.component';
 import { IniciarSesionComponent } from './component/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './component/portfolio/portfolio.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
     UsuarioComponent,
     IniciarSesionComponent,
     PortfolioComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,12 +40,12 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
     FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
   ],
-  providers: [PorfolioService,
-    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
+  providers: [
+    PorfolioService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

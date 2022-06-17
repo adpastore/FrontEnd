@@ -139,4 +139,24 @@ img{
   width:  200px;
   height: 60px;
   margin-left: 40%;
+  border-radius: 54px;
+  background: #151c2d;
+  box-shadow:  18px 18px 30px #515151,
+              -18px -18px 30px #8c8a8d;
+}
+
+.present{
+  font-family: 'Lucida Sans', sans-serif;
+  color: #afb2cc;
+  animation: neon 5s infinite;
+}
+@keyframes neon{
+  0%, 39%, 41%, 59%, 61%, 100%{
+    text-shadow: white 0 0 12px,
+    #ff3aad 0 0 24px,
+    #ff3aad 0 0 63px;
+  }
+  40%, 60%{
+    text-shadow: none;
+  }
 }

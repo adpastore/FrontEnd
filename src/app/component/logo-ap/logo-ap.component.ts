@@ -6,9 +6,8 @@ import { Usuario, UsuarioService } from 'src/app/servicios/usuario.service';
   selector: 'app-logo-ap',
   templateUrl: './logo-ap.component.html',
   styleUrls: ['./logo-ap.component.css'],
-  providers:[UsuarioService],
+  providers: [UsuarioService],
 })
-
 export class LogoAPComponent implements OnInit {
   public usuarios: Usuario[] = [];
   public get usuarioService(): UsuarioService {
@@ -18,19 +17,19 @@ export class LogoAPComponent implements OnInit {
     this._usuarioService = value;
   }
 
-  constructor(private _usuarioService: UsuarioService) { }
+  constructor(private _usuarioService: UsuarioService) {}
 
   ngOnInit(): void {
     this.getUsuario();
   }
   public getUsuario(): void {
-  this.usuarioService.getUsuario().subscribe({
-    next: (response: Usuario[]) => {
-      this.usuarios = response;
-    },
-    error: (error: HttpErrorResponse) => {
-      alert(error.message);
-    }
-  })
-}
+    this.usuarioService.getUsuario().subscribe({
+      next: (response: Usuario[]) => {
+        this.usuarios = response;
+      },
+      error: (error: HttpErrorResponse) => {
+        alert(error.message);
+      },
+    });
+  }
 }

@@ -6,15 +6,14 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
-  styleUrls: ['./usuario.component.css']
+  styleUrls: ['./usuario.component.css'],
 })
 export class UsuarioComponent implements OnInit {
   public usuarios: Usuario[] = [];
   public editarUsuario: Usuario | undefined;
   public deleteUsuario: Usuario | undefined;
 
-
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService) {}
 
   ngOnInit(): void {
     this.getUsuario();
@@ -26,31 +25,29 @@ export class UsuarioComponent implements OnInit {
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
-      }
-    })
+      },
+    });
   }
   // Implementacion Modal
   public onOpenModal(mode: string, usuarios?: Usuario): void {
-
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
     if (mode === 'add') {
-      button.setAttribute('data-target', '#addUsuarioModal')
+      button.setAttribute('data-target', '#addUsuarioModal');
     } else if (mode === 'delete') {
       this.deleteUsuario = usuarios;
-      button.setAttribute('data-target', '#deleteUsuarioModal')
+      button.setAttribute('data-target', '#deleteUsuarioModal');
     } else if (mode === 'edit') {
       this.editarUsuario = usuarios;
-      button.setAttribute('data-target', '#editarUsuarioModal')
+      button.setAttribute('data-target', '#editarUsuarioModal');
     }
     container?.appendChild(button);
     button.click();
   }
   public onAddUsuario(addForm: NgForm): void {
-
     document.getElementById('add-usuario-form')?.click();
     this.usuarioService.addUsuario(addForm.value).subscribe({
       next: (response: Usuario) => {
@@ -61,8 +58,8 @@ export class UsuarioComponent implements OnInit {
       error: (error: HttpErrorResponse) => {
         alert(error.message);
         addForm.reset();
-      }
-    })
+      },
+    });
   }
   public onUpdateUsuario(usuario: Usuario) {
     this.editarUsuario = usuario;
@@ -74,11 +71,10 @@ export class UsuarioComponent implements OnInit {
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
-      }
-    })
+      },
+    });
   }
   public onDeleteUsuario(idEdu: number): void {
-
     this.usuarioService.deleteUsuario(idEdu).subscribe({
       next: (response: void) => {
         console.log(response);
@@ -86,7 +82,7 @@ export class UsuarioComponent implements OnInit {
       },
       error: (error: HttpErrorResponse) => {
         alert(error.message);
-      }
-    })
+      },
+    });
   }
 }
