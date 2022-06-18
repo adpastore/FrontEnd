@@ -5,23 +5,41 @@
       <img alt="Inti" src="../../../assets/inti_t.png" id="inti" />
       <img alt="Ministerio" src="../../../assets/ministerio_t.png" id="minis" />
     </div>
-
     <div class="iconos">
-      <a href="{{ usuarios[0].facebook }}" target="_blank"
-      ><img alt="Facebook" src="../../../assets/facebook_c_t.png" id="face "
-      /></a>
-      <a href="{{ usuarios[0].github }}" target="_blank"
-        ><img alt="Github" src="../../../assets/github_c_t.png" id="git"
-      /></a>
-      <a href="{{ usuarios[0].linkedin }}" target="_blank"
-        ><img alt="Linkedin" src="../../../assets/linkedin_c_t.png" id="link"
-      /></a>
-      <a href="https://alvo.chat/qi" target="_blank"
-        ><img alt="Whatsapp" src="../../../assets/whatsapp_c_t.png" id="what"
-      /></a>
-      <a href="mailto:{{ usuarios[0].mail }}" target="_blank"
-        ><img alt="Correo" src="../../../assets/correo_c_t.png" id="correo"
-      /></a>
+      <div class="cuerpo">
+        <div class="dropdown">
+          <span class="label"
+            ><em class="fa-solid fa-link"></em> Social Links</span
+          >
+          <ul class="items">
+            <li>
+              <a href="{{ usuarios[0].facebook }}" target="_blank"
+                ><em class="fa-brands fa-facebook"></em> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="{{ usuarios[0].github }}" target="_blank"
+                ><em class="fa-brands fa-github"></em> Github</a
+              >
+            </li>
+            <li>
+              <a href="{{ usuarios[0].linkedin }}" target="_blank"
+                ><em class="fa-brands fa-linkedin"></em> Linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://alvo.chat/qi" target="_blank"
+                ><em class="fa-brands fa-whatsapp"></em> Whatsapp</a
+              >
+            </li>
+            <li>
+              <a href="mailto:{{ usuarios[0].mail }}" target="_blank"
+                ><em class="fa-brands fa-envelope"></em> Correo</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
       <button type="button" class="btn btn-outline-success" id="boton">
         <a href="">Logout</a>
       </button>
