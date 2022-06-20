@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fix;
 }
 
 .logo{
@@ -34,15 +35,64 @@ img{
   display: flex;
 }
 
-#boton{
-  margin-right: 5px;
+
+.logout {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  align-items: baseline;
+  background: #122660;
 }
+
+.salida {
+  margin-right: 5px;
+  padding: 18px 30px;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #122660;
+  border-radius: 5px;
+  min-width: 200px;
+  color: #584439;
+  z-index: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.salida::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -50px;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #929093, transparent);
+  transition: all 1s;
+  z-index: -1;
+  transform: translateX(-120px) skew(-20deg);
+}
+
+.salida:hover::before {
+  transform: translateX(300px) skew(-20deg);
+}
+
+.salida:hover {
+  background: #122660;
+}
+
+
 
 .cuerpo {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
   background: #122660;
-  color: #fff;
+  color: #cccccc;
   display: grid;
   place-items: center;
 }
@@ -67,7 +117,7 @@ ul {
 }
 
 .items a {
-  color: #fff;
+  color: #cccccc;
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -76,7 +126,7 @@ ul {
 }
 .items a:hover {
   border-left: 5px solid;
-  background: rgb(37, 37, 37);
+  background: #1f1823;
 }
 
 .fa-brands,
@@ -85,7 +135,7 @@ ul {
 }
 
 .items {
-  background: rgb(52, 52, 52);
+  background: #1f1823;
   opacity: 0;
   visibility: hidden;
   min-width: 100%;
@@ -102,7 +152,7 @@ ul {
   position: absolute;
   width: 15px;
   height: 15px;
-  background: rgb(52, 52, 52);
+  background: #1f1823;
   transform: rotate(45deg);
   top: -7px;
   left: 20px;
@@ -117,5 +167,5 @@ ul {
 }
 
 .dropdown:hover > .label {
-  background: rgb(255, 115, 0);
+  background: #987763;
 }

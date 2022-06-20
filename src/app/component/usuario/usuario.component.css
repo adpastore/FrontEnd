@@ -40,10 +40,17 @@
     margin-left: -10%;
   }
 
-  .miFoto{
-  max-width: 80%;
-  margin-top: 7%;
+  .miFoto {
+    max-width: 80%;
+    margin-top: 7%;
+    overflow:hidden;
+    transition: .8s;
   }
+  .miFoto:hover {
+    overflow:hidden;
+    transition: .8s;
+    transform: scale(1.5);
+   }
 
   /*Color de fondo de pagina*/
   .containerGen{
@@ -102,6 +109,7 @@
   .modal, .modal div {
     background-color: #e3d6d0;
   }
+
 
 
   /* ESTILOS DE LA FOTO DE PERFIL SEGUN LOS TAMAÑOS DE PANALLA */
