@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ExperienciaService {
-  private apiServerUrl = 'http://localhost:8080/api/experiencia';
+  private apiServerUrl = 'https://apadpfront.web.app/api/experiencia';
 
   constructor(private http: HttpClient) {}
 

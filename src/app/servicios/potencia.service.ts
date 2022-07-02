@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PotenciaService {
-  private apiServerUrl = 'http://localhost:8080/api/potencias';
+  private apiServerUrl = 'https://apadpfront.web.app/api/potencias';
 
   constructor(private http: HttpClient) {}
 

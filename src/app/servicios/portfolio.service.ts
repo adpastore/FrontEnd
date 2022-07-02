@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PorfolioService {
-  url: string = 'http://localhost:8080/api/';
+  url: string = 'https://apadpfront.web.app/api';
   constructor(private http: HttpClient) {}
 
   obtenerDatos(): Observable<any> {

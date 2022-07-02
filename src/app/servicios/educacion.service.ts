@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EducacionService {
-  private apiServerUrl = 'http://localhost:8080/api/educacion';
+  private apiServerUrl = 'https://apadpfront.web.app/api/educacion';
 
   constructor(private http: HttpClient) {}
 
