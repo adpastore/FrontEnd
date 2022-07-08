@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ExperienciaService {
-  private apiServerUrl = 'https://apadpfront.web.app/api/experiencia';
+  private apiServerUrl = 'https://app-backend-adp.herokuapp.com/api/experiencia';
 
   constructor(private http: HttpClient) {}
 

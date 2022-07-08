@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UsuarioService {
-  private apiServerUrl = 'https://apadpfront.web.app/api/usuario';
+  private apiServerUrl = 'https://app-backend-adp.herokuapp.com/api/usuario';
 
   constructor(private http: HttpClient) {}
 

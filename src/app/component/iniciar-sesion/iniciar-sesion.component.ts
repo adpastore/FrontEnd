@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Autenticacionservice } from 'src/app/servicios/autenticacion.service';
+import { Autenticacionservice } from '../../servicios/autenticacion.service';
 
 @Component({
   selector: 'app-iniciar-sesion',

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EducacionService {
-  private apiServerUrl = 'https://apadpfront.web.app/api/educacion';
+  private apiServerUrl = 'https://app-backend-adp.herokuapp.com/api/educacion';
 
   constructor(private http: HttpClient) {}
 
