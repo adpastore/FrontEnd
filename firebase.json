@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/proy-int-andres-pastore",
+    "public": "y",
     "ignore": [
       "firebase.json",
       "**/.*",
