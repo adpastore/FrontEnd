@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class Autenticacionservice {
-  url = 'https://app-backend-adp.herokuapp.com/api/login';
+  url = 'https://app-backend-adp.herokuapp.com';
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http: HttpClient) {
     console.log('El servicio de autenticación está corriendo');

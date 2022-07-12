@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class HeaderService {
-  private apiServerUrl ='https://app-backend-adp.herokuapp.com/api';
+  private apiServerUrl ='https://app-backend-adp.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
