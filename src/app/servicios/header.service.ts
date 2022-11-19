@@ -1,5 +1,4 @@
 import { Usuario } from './usuario.service';
-import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class HeaderService {
-  private apiServerUrl ='https://app-backend-adp.herokuapp.com';
+  private apiServerUrl ='https://app-backend-adp.herokuapp.com/api';
 
   constructor(private http: HttpClient) {}
 

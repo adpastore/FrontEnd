@@ -16,8 +16,8 @@ export class IniciarSesionComponent implements OnInit {
     private ruta: Router
   ) {
     this.form = this.formBuilder.group({
-      email: ['adpastore@gmail.com', [Validators.required, Validators.email]],
-      password: ['123456', [Validators.required, Validators.minLength(6)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
@@ -36,7 +36,7 @@ export class IniciarSesionComponent implements OnInit {
     this.autenticacionService
       .IniciarSesion(this.form.value)
       .subscribe((data) => {
-        console.log('DATA:' + JSON.stringify(data));
+        console.log('Datos informados:' + JSON.stringify(data));
         this.ruta.navigate(['/portfolio']);
       });
   }

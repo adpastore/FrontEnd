@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PorfolioService {
-  url: string = 'https://app-backend-adp.herokuapp.com/api';
+  url: string = 'https://app-backend-adp.herokuapp.com/api/portfolio';
   constructor(private http: HttpClient) {}
 
   obtenerDatos(): Observable<any> {
